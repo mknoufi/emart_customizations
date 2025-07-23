@@ -1,1 +1,9 @@
-test  cashier
+EMart Purchase Management
+EMart Sales Management
+EMart Inventory Management
+EMart CRM
+EMart Integrations
+EMart HRMS
+EMart Portals
+EMart Reporting
+EMart Mobile

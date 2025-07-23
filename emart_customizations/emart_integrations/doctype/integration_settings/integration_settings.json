@@ -1,0 +1,198 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "barcode_section",
+  "enable_barcode_scanning",
+  "barcode_scanner_type",
+  "scanner_port",
+  "column_break_4",
+  "auto_item_lookup",
+  "barcode_field",
+  "biometric_section",
+  "enable_biometric",
+  "biometric_device_ip",
+  "biometric_port",
+  "column_break_10",
+  "sync_interval",
+  "tally_section",
+  "enable_tally_sync",
+  "tally_server_ip",
+  "tally_port",
+  "column_break_15",
+  "sync_frequency",
+  "last_sync",
+  "whatsapp_section",
+  "enable_whatsapp",
+  "whatsapp_api_key",
+  "whatsapp_instance_id",
+  "column_break_20",
+  "message_templates"
+ ],
+ "fields": [
+  {
+   "fieldname": "barcode_section",
+   "fieldtype": "Section Break",
+   "label": "Barcode Settings"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_barcode_scanning",
+   "fieldtype": "Check",
+   "label": "Enable Barcode Scanning"
+  },
+  {
+   "fieldname": "barcode_scanner_type",
+   "fieldtype": "Select",
+   "label": "Scanner Type",
+   "options": "USB Scanner\nBluetooth Scanner\nCamera Scanner"
+  },
+  {
+   "fieldname": "scanner_port",
+   "fieldtype": "Data",
+   "label": "Scanner Port"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "auto_item_lookup",
+   "fieldtype": "Check",
+   "label": "Auto Item Lookup"
+  },
+  {
+   "default": "barcode",
+   "fieldname": "barcode_field",
+   "fieldtype": "Data",
+   "label": "Barcode Field"
+  },
+  {
+   "fieldname": "biometric_section",
+   "fieldtype": "Section Break",
+   "label": "Biometric Settings"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_biometric",
+   "fieldtype": "Check",
+   "label": "Enable Biometric"
+  },
+  {
+   "fieldname": "biometric_device_ip",
+   "fieldtype": "Data",
+   "label": "Device IP"
+  },
+  {
+   "fieldname": "biometric_port",
+   "fieldtype": "Data",
+   "label": "Device Port"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "5",
+   "fieldname": "sync_interval",
+   "fieldtype": "Int",
+   "label": "Sync Interval (minutes)"
+  },
+  {
+   "fieldname": "tally_section",
+   "fieldtype": "Section Break",
+   "label": "Tally Integration"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_tally_sync",
+   "fieldtype": "Check",
+   "label": "Enable Tally Sync"
+  },
+  {
+   "fieldname": "tally_server_ip",
+   "fieldtype": "Data",
+   "label": "Tally Server IP"
+  },
+  {
+   "default": "9000",
+   "fieldname": "tally_port",
+   "fieldtype": "Data",
+   "label": "Tally Port"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Daily",
+   "fieldname": "sync_frequency",
+   "fieldtype": "Select",
+   "label": "Sync Frequency",
+   "options": "Hourly\nDaily\nWeekly\nManual"
+  },
+  {
+   "fieldname": "last_sync",
+   "fieldtype": "Datetime",
+   "label": "Last Sync",
+   "read_only": 1
+  },
+  {
+   "fieldname": "whatsapp_section",
+   "fieldtype": "Section Break",
+   "label": "WhatsApp Integration"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_whatsapp",
+   "fieldtype": "Check",
+   "label": "Enable WhatsApp"
+  },
+  {
+   "fieldname": "whatsapp_api_key",
+   "fieldtype": "Password",
+   "label": "API Key"
+  },
+  {
+   "fieldname": "whatsapp_instance_id",
+   "fieldtype": "Data",
+   "label": "Instance ID"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "message_templates",
+   "fieldtype": "Text Editor",
+   "label": "Message Templates"
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EMart Integrations",
+ "name": "Integration Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
