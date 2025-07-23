@@ -1,0 +1,79 @@
+{
+ "add_total_row": 1,
+ "columns": [
+  {
+   "fieldname": "salesman",
+   "fieldtype": "Link",
+   "label": "Salesman",
+   "options": "Sales Person",
+   "width": 150
+  },
+  {
+   "fieldname": "target_amount",
+   "fieldtype": "Currency",
+   "label": "Target Amount",
+   "width": 120
+  },
+  {
+   "fieldname": "achieved_amount",
+   "fieldtype": "Currency",
+   "label": "Achieved Amount", 
+   "width": 120
+  },
+  {
+   "fieldname": "achievement_percentage",
+   "fieldtype": "Percent",
+   "label": "Achievement %",
+   "width": 120
+  },
+  {
+   "fieldname": "variance",
+   "fieldtype": "Currency",
+   "label": "Variance",
+   "width": 120
+  }
+ ],
+ "creation": "2025-01-01 00:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_date", 
+   "fieldtype": "Date",
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "salesman",
+   "fieldtype": "Link",
+   "label": "Salesman",
+   "options": "Sales Person"
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{}",
+ "letter_head": "",
+ "modified": "2025-01-01 00:00:00.000000",
+ "module": "EMart Reporting",
+ "name": "Sales Performance",
+ "owner": "Administrator",
+ "query": "",
+ "ref_doctype": "Salesman Target",
+ "report_name": "Sales Performance",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Sales Manager"
+  },
+  {
+   "role": "Sales User"
+  }
+ ]
+}

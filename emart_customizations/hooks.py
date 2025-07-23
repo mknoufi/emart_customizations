@@ -1,7 +1,7 @@
 app_name = "emart_customizations"
-app_title = "test  cashier"
+app_title = "EMart Customizations"
 app_publisher = "nou"
-app_description = "cashier"
+app_description = "Comprehensive ERPNext customizations for retail and e-commerce operations"
 app_email = "mknoufi@gmail.com"
 app_license = "mit"
 
@@ -11,15 +11,15 @@ app_license = "mit"
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "emart_customizations",
-# 		"logo": "/assets/emart_customizations/logo.png",
-# 		"title": "test  cashier",
-# 		"route": "/emart_customizations",
-# 		"has_permission": "emart_customizations.api.permission.has_app_permission"
-# 	}
-# ]
+add_to_apps_screen = [
+	{
+		"name": "emart_customizations",
+		"logo": "/assets/emart_customizations/logo.png",
+		"title": "EMart Customizations",
+		"route": "/app/emart-dashboard",
+		"has_permission": "emart_customizations.api.has_app_permission"
+	}
+]
 
 # Includes in <head>
 # ------------------
@@ -137,34 +137,30 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Sales Invoice": {
+		"on_submit": "emart_customizations.emart_sales_management.events.update_salesman_achievement"
+	},
+	"Purchase Order": {
+		"on_submit": "emart_customizations.emart_purchase_management.events.calculate_purchase_incentive"
+	},
+	"Stock Ledger Entry": {
+		"on_submit": "emart_customizations.emart_inventory_management.events.check_aging_stock"
+	}
+}
 
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"emart_customizations.tasks.all"
-# 	],
-# 	"daily": [
-# 		"emart_customizations.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"emart_customizations.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"emart_customizations.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"emart_customizations.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	"daily": [
+		"emart_customizations.emart_inventory_management.tasks.generate_aging_stock_alerts",
+		"emart_customizations.emart_integrations.tasks.sync_tally_data"
+	],
+	"hourly": [
+		"emart_customizations.emart_integrations.tasks.sync_biometric_data"
+	]
+}
 
 # Testing
 # -------
