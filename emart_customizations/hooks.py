@@ -1,7 +1,7 @@
 app_name = "emart_customizations"
-app_title = "test  cashier"
+app_title = "EMart Customizations"
 app_publisher = "nou"
-app_description = "cashier"
+app_description = "E-commerce and POS system customizations with advanced discount calculator"
 app_email = "mknoufi@gmail.com"
 app_license = "mit"
 
